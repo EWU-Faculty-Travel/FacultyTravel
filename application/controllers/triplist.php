@@ -364,7 +364,7 @@ class Triplist extends MY_Controller
 			$DTCemails = $this->pretrip_model->getDTCEmails();
 			foreach($DTCemails->result() as $row)
 			{
-				$this->email->from('cstrav@csmail.cslabs.ewu.edu', 'Travel Voucher App');
+				$this->email->from('cstrav@csmail.compsci.ewu.edu', 'Travel Voucher App');
 				$this->email->to($row->email);
 				$this->email->subject('Voucher form has been submitted!!!');
 				$name = $this->pretrip_model->getName($this->cas->get_user());
@@ -650,7 +650,7 @@ class Triplist extends MY_Controller
             $DTCemails = $this->pretrip_model->getDTCEmails();
             foreach($DTCemails->result() as $row)
             {
-                $this->email->from('cstrav@csmail.cslabs.ewu.edu', 'Travel Voucher App');
+                $this->email->from('cstrav@csmail.compsci.ewu.edu', 'Travel Voucher App');
                 $this->email->to($row->email);
                 $this->email->subject('Voucher form has been submitted!!!');
                 $name = $this->pretrip_model->getName($this->cas->get_user());

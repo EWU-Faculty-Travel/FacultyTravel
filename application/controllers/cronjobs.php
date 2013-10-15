@@ -42,7 +42,7 @@ class Cronjobs extends MY_Controller
         $trip_info = $this->cron_model->cronImmediateReminderDatabaseQuery();
         foreach($trip_info->result() as $row)
         {
-            $this->email->from('cstrav@csmail.cslabs.ewu.edu', 'Travel Voucher App');
+            $this->email->from('cstrav@csmail.compsci.ewu.edu', 'Travel Voucher App');
             $this->email->to($row->email);
             $this->email->subject('Post Trip Reminder');
             $message = '<p>'.$row->name.', you have a trip needing a post trip submission. </p>
@@ -59,7 +59,7 @@ class Cronjobs extends MY_Controller
         $trip_info = $this->cron_model->cronDelayedReminderDatabaseQuery();
         foreach($trip_info->result() as $row)
         {
-            $this->email->from('cstrav@csmail.cslabs.ewu.edu', 'Travel Voucher App');
+            $this->email->from('cstrav@csmail.compsci.ewu.edu', 'Travel Voucher App');
             $this->email->to($row->email);
             $this->email->subject('Post Trip Reminder');
             $message = '<p>'.$row->name.', you have a trip needing a post trip submission. </p>

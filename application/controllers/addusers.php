@@ -128,7 +128,7 @@ class Addusers extends MY_Controller
 				{
 					$this->load->library('email');
 
-					$this->email->from('cstrav@csmail.cslabs.ewu.edu', 'Travel Voucher App');
+					$this->email->from('cstrav@csmail.compsci.ewu.edu', 'Travel Voucher App');
 					$this->email->to($email);
 
 					$this->email->subject('You need to update your profile');

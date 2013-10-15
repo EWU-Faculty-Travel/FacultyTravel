@@ -8,7 +8,7 @@ $config['crlf'] = '\n';
 
 
 $config['protocol'] = 'smtp';
-$config['smtp_host'] = 'csmail.cslabs.ewu.edu';
+$config['smtp_host'] = 'csmail.compsci.ewu.edu';
 $config['smtp_port'] = 25;
 $config['smtp_user'] = 'cstrav';
 $config['smtp_pass'] = 'f*7wP-m83';

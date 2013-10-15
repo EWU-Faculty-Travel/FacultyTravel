@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Fix border display in FF*/
+.t1 { 
+	border: 1px solid #000; 
+	border-collapse: collapse
+}
+
+.t2 { 
+	border: 2px solid #000; 
+	border-collapse: collapse
+}
+
+.page {
+	width: 8.5in;
+	Margin-left:auto;
+    Margin-right:auto;
+}
+
+.main {
+	width: 8in;
+}
+
+.body {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10px !important;
+}
+
+.small {
+	font-size: 7px !important;
+}
+
+.large {
+	font-size: 12px !important;
+}
+

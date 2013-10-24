@@ -1,0 +1,57 @@
+USE travel_app;
+
+CREATE TABLE `tbl_trip` (
+  `trip_id` int(11) NOT NULL AUTO_INCREMENT,
+  `dept_code` char(4) NOT NULL,
+  `trip_name` varchar(50) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL,
+  `departure` varchar(50) DEFAULT NULL,
+  `destination` varchar(50) DEFAULT NULL,
+  `purpose` varchar(250) DEFAULT NULL,
+  `group_count` int(11) DEFAULT '0',
+  `authorization` char(8) DEFAULT NULL,
+  `status_code` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`trip_id`),
+  KEY `dept_code` (`dept_code`),
+  KEY `user_id` (`user_id`),
+  KEY `status_code` (`status_code`),
+  CONSTRAINT `tbl_trip_ibfk_1` FOREIGN KEY (`dept_code`) REFERENCES `tbl_departments` (`dept_code`),
+  CONSTRAINT `tbl_trip_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbl_users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `tbl_trip_ibfk_3` FOREIGN KEY (`status_code`) REFERENCES `tbl_status` (`status_code`) ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=357 DEFAULT CHARSET=latin1;
+
+
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (193,'CSCD','Connie',94,'2013-08-01 07:00:00','2013-08-09 19:00:00','Cheney, WA','Seattle, WA','Testing Trip',0,'1308305',0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (194,'CSCD','Connie',7,'2013-08-01 07:00:00','2013-08-09 19:00:00','Cheney, WA','Seattle, WA','Testing Trip',0,'1308306',0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (263,'CSCD','Post Trip Testing',94,'2013-08-13 00:00:00','2013-08-13 00:00:00','Here, Here','There','Post Trip Testing',5,'13122101',1);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (264,'CSCD','Furture',94,'2013-08-30 00:00:00','2013-08-30 00:00:00','Testing, Test','Testing, Test','Testing, Test',0,'130828',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (265,'CSCD','Testing 1 from now',94,'2013-08-23 00:00:00','2013-08-23 00:00:00','Testing, Testing','Testing, Testing','Testing, Testing',0,'1308296',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (266,'CSCD','Testing 1 day from now',94,'2013-08-24 00:00:00','2013-08-24 00:00:00','Testing, Testing','Testing, Testing','Testing, Testing',0,'0',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (267,'CSCD','Testing 8 day ago',94,'2013-08-15 00:00:00','2013-08-15 00:00:00','Testing, Testing','Testing, Testing','Testing, Testing',0,'556t6y',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (272,'CSCD','print a form',91,'2013-08-24 03:00:00','2013-08-24 03:00:00','printing, aform','aform, printing','printing a form',0,'13080102',8);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (273,'CSCD','print a form',91,'2013-08-24 03:00:00','2013-08-24 03:00:00','printing, aform','aform, printing','printing a form',0,'253420',8);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (318,'CSCD','print final form',91,'2013-08-24 19:45:00','2013-09-30 19:45:00','somewhere, here','somewhere, there','lots of input',2,'0',0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (324,'CSCD','print final form',91,'2013-08-24 19:45:00','2013-09-30 19:45:00','somewhere, here','somewhere, there','lots of input',2,'0',0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (330,'CSCD','printing',91,'2013-08-26 02:15:00','2013-08-26 02:15:00','here, orso','there, orso','testing some stuff',0,'1308301',8);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (332,'CSCD','newbigbigtrip',101,'2013-08-30 11:00:00','2013-09-27 16:00:00','Cheney, WA','Washington DC','BIGTEST',0,'082813',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (333,'CSCD','A Test Trip',1,'2013-08-01 00:00:00','2013-08-12 00:00:00','This, place','Another place','To test some things',0,null,5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (334,'CSCD','newthurs',101,'2013-08-29 10:30:00','2013-08-29 14:30:00','here, wa','there, ID','superfun',1,'1308307',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (335,'CSCD','index codes',91,'2013-08-29 11:30:00','2013-08-29 11:30:00','here, orso','there, orso','test index codes',0,'13082901',1);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (336,'CSCD','privatecar',101,'2013-08-29 00:30:00','2013-08-30 09:15:00','cheney, wa','timbuktu','afewzzzzs',0,'13082704',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (337,'CSCD','werere',101,'2013-08-29 16:15:00','2013-08-30 16:15:00','spokane, WA','Timbuktu, CA','dunno',3,null,5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (338,'CSCD','latethurs',101,'2013-07-31 00:00:00','2013-08-20 00:00:00','spo, wa','phoenix, az','falderal',0,'1307311',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (339,'CSCD','Mileage Pretrip',91,'2013-08-29 19:30:00','2013-08-29 19:30:00','from, pretrip','to, mileage','mileage pretrip purpose',0,null,1);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (341,'CSCD','Testing Per Diem',1,'2013-08-01 00:00:00','2013-08-12 00:00:00','Here, WA','There','Test per diem stuff',0,null,5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (342,'CSCD','testing misc',1,'2013-08-01 00:00:00','2013-08-12 00:00:00','Seattle, WA','CRAXY TOWN','Test refunds',0,'1308302',5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (343,'CSCD','Testing psot trip Mileage',1,'2013-08-01 00:00:00','2013-08-12 00:00:00','Who, Cares','Another place','Testing post trip mileage',0,null,5);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (344,'CSCD','Index code Test',1,'2013-08-30 00:00:00','2013-08-31 00:00:00','My tear ducts, WA','sdgdg','one quick test',0,null,1);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (345,'CSCD','newfri',101,'2013-08-30 03:00:00','2013-08-30 17:00:00','here, WA','there, OR','doodling',1,null,0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (346,'CSCD','pastanddone',101,'2013-07-17 00:00:00','2013-07-31 00:00:00','spokane, WA','timbuktu, CA','testing post',0,null,0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (347,'CSCD','Whole Thing',94,'2013-08-25 00:00:00','2013-08-28 00:00:00','Kirkland, WA','Cape Disappointment, WA','Testing the whole process from start to finish',50,'T1308301',8);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (348,'CSCD','email',91,'2013-10-15 00:00:00','2013-10-31 00:00:00','here, orso','reaking, place','gjfytediyril7t',0,null,0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (349,'CSCD','ToTheMoon',108,'2013-11-12 12:00:00','2013-11-19 12:00:00','Cheney, WA','TheMoon','Meeting',0,'12',0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (351,'CSCD','asdasd',110,'2013-10-01 00:00:00','2013-10-09 00:00:00','cheney, wa','spokane, wa','FOR FUN!! YAY GOVERNMENT MONEY!',0,null,0);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (352,'CSCD','Field Trip',109,'2013-10-17 00:00:00','2013-10-17 00:00:00','cheney, wa','north pole','nothing',0,null,1);
+insert into `tbl_trip`(`trip_id`,`dept_code`,`trip_name`,`user_id`,`start_date`,`end_date`,`departure`,`destination`,`purpose`,`group_count`,`authorization`,`status_code`) values (356,'CSCD','newoct',101,'2013-10-25 00:00:00','2013-10-27 00:00:00','spokane, wa','Boise, ID','lkjlkjkl',0,null,0);

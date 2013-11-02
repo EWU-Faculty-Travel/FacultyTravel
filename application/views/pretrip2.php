@@ -62,7 +62,9 @@
 				$b_hr = TRUE;
 			}
 			?>
-			<strong>Airfare</strong><br /><br /><a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the airfare quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
+			<strong>Airfare</strong><br /> <br /> <a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span
+		class="custom help"><img src="/../../assets/images/Help.png"
+			alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the airfare quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
 			<?
 			$form_input = array('name' => 'airfare_artistic', 'id' => 'airfare_artistic', 'maxlength' => '8', 'size' => '8', 'value' => set_value('airfare_artistic', (isset($airfare_artistic) ? $airfare_artistic : ''))); //Required
 			echo form_input($form_input);
@@ -88,7 +90,9 @@
 				$b_hr = TRUE;
 			}
 			?>
-			<strong>Train</strong><br /><br /><a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the train fare quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
+			<strong>Train</strong><br /> <br /> <a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span
+		class="custom help"><img src="/../../assets/images/Help.png"
+			alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the train fare quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
 			<?
 			$form_input = array('name' => 'train_quote', 'id' => 'train_quote', 'maxlength' => '8', 'size' => '8', 'value' => set_value('train_quote', (isset($train_quote) ? $train_quote : ''))); //Required
 			echo form_input($form_input);
@@ -114,7 +118,9 @@
 				$b_hr = TRUE;
 			}
 			?>
-			<strong>Bus</strong><br /><br /><a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the bus fare quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
+			<strong>Bus</strong><br /> <br /> <a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span
+		class="custom help"><img src="/../../assets/images/Help.png"
+			alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the bus fare quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
 			<?
 			$form_input = array('name' => 'bus_quote', 'id' => 'bus_quote', 'maxlength' => '8', 'size' => '8', 'value' => set_value('bus_quote', (isset($bus_quote) ? $bus_quote : ''))); //Required
 			echo form_input($form_input);
@@ -140,7 +146,11 @@
 				$b_hr = TRUE;
 			}
 			?>
-			<strong>Motor Pool</strong><br /><br /><a class="tooltip" href="#">EWU Motorpool Quote:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>EWU Motorpool Quote: </em>Please enter the EWU motorpool quote.</span></a> $
+			<strong>Motor Pool</strong><br /> <br /> <a class="tooltip" href="#">EWU
+		Motorpool Quote:<span class="custom help"><img
+			src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>EWU
+				Motorpool Quote: </em>Please enter the EWU motorpool quote.</span>
+	</a> $
 			<?
 			$form_input = array('name' => 'mpool_quote', 'id' => 'mpool_quote', 'maxlength' => '8', 'size' => '8', 'value' => set_value('mpool_quote', (isset($mpool_quote) ? $mpool_quote : ''))); //Required
 			echo form_input($form_input);
@@ -166,7 +176,9 @@
 				$b_hr = TRUE;
 			}
 			?>
-			<strong>Charter</strong><br /><br /><a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the charter quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
+			<strong>Charter</strong><br /> <br /> <a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span
+		class="custom help"><img src="/../../assets/images/Help.png"
+			alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the charter quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
 			<?
 			$form_input = array('name' => 'charter_quote', 'id' => 'charter_quote', 'maxlength' => '8', 'size' => '8', 'value' => set_value('charter_quote', (isset($charter_quote) ? $charter_quote : ''))); //Required
 			echo form_input($form_input);
@@ -192,7 +204,9 @@
 				$b_hr = TRUE;
 			}
 			?>
-			<strong>Courtesy Car</strong><br /><br /><a class="tooltip" href="#"><? echo $travel_agent; ?> Quote:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the courtesy car quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
+			<strong>Courtesy Car</strong><br /> <br /> <a class="tooltip"
+		href="#"><? echo $travel_agent; ?> Quote:<span class="custom help"><img
+			src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em><? echo $travel_agent; ?> Quote: </em>Please enter the courtesy car quote that was given to you by <? echo $travel_agent; ?> (<? echo $travel_phone; ?>).</span></a> $
 			<?
 			$form_input = array('name' => 'courtesy_quote', 'id' => 'courtesy_quote', 'maxlength' => '8', 'size' => '8', 'value' => set_value('courtesy_quote', (isset($courtesy_quote) ? $courtesy_quote : ''))); //Required
 			echo form_input($form_input);
@@ -218,7 +232,12 @@
 				$b_hr = TRUE;
 			}
 			?>
-			<strong>Rental Car</strong><br /><br /><a class="tooltip" href="#">Enterprise Quote:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Enterprise Quote: </em>Please enter the rental car quote that was given to you by Enterprise or a travel agent.</span></a> $
+			<strong>Rental Car</strong><br /> <br /> <a class="tooltip" href="#">Enterprise
+		Quote:<span class="custom help"><img
+			src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Enterprise
+				Quote: </em>Please enter the rental car quote that was given to you
+			by Enterprise or a travel agent.</span>
+	</a> $
 			<?
 			$form_input = array('name' => 'rental_car_enterprise', 'id' => 'rental_car_enterprise', 'maxlength' => '8', 'size' => '8', 'value' => set_value('rental_car_enterprise', (isset($rental_car_enterprise) ? $rental_car_enterprise : '')));
 			echo form_input($form_input);
@@ -249,7 +268,11 @@
 				$b_hr = TRUE;
 			}
 			?>
-			<strong>Personal Car</strong><br /><br /><a class="tooltip" href="#">Private Vehicle Mileage Reimbursement:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Mileage: </em>Enter your daily estimated mileage in your personal car in the table below.</span></a> $
+			<strong>Personal Car</strong><br /> <br /> <a class="tooltip"
+		href="#">Private Vehicle Mileage Reimbursement:<span
+		class="custom help"><img src="/../../assets/images/Help.png"
+			alt="Help" height="48" width="48" /><em>Mileage: </em>Enter your
+			daily estimated mileage in your personal car in the table below.</span></a> $
 			<?
 			$form_input = array('name' => 'private_car_total', 'id' => 'private_car_total', 'maxlength' => '8', 'size' => '8', 'readonly' => 'readonly', 'value' => set_value('private_car_total', (isset($private_car_total) ? $private_car_total : '0.00')));
 			echo form_input($form_input);
@@ -611,15 +634,22 @@
 
 		});
 	</script>
-	<strong>Per Diem</strong><br /><br /><a class="tooltip" href="#">Per Diem Total:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Per Diem</em>
-	Enter your daily costs for breakfast, lunch, dinner and hotel in the table below. Also enter the start and end of your travel day. If your travel
-	day begins after the breakfast period do not enter an estimate for the breakfast cost.</span></a> $
+	<strong>Per Diem</strong><br /> <br /> <a class="tooltip" href="#">Per
+		Diem Total:<span class="custom help"><img
+			src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Per
+				Diem</em> Enter your daily costs for breakfast, lunch, dinner and
+			hotel in the table below. Also enter the start and end of your travel
+			day. If your travel day begins after the breakfast period do not
+			enter an estimate for the breakfast cost.</span>
+	</a> $
     <?
     $form_input = array('name' => 'per_deim_total', 'id' => 'per_deim_total', 'maxlength' => '8', 'size' => '8', 'readonly' => 'readonly', 'value' => set_value('per_deim_total', (isset($per_deim_total) ? $per_deim_total : '0.00')));
 	echo form_input($form_input); //Needs to be filled
 
 	?>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://access.ewu.edu/travel.xml" target="_blank">Click here for per diem rates.</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+		href="http://access.ewu.edu/travel.xml" target="_blank">Click here for
+		per diem rates.</a>
 	<?
     $date = array('data' => 'Date:');
     $from = array('data' => 'From:');
@@ -834,30 +864,31 @@
     ?>
 	<script type="text/javascript">
 		var perDeimSum = 0;
+		
+		function updateSum(){
+			perDeimSum = +parseFloat($("#per_deim_rate_0").val() * $("#per_deim_days_0").val() + $("#per_deim_rate_1").val() * $("#per_deim_days_1").val() + $("#per_deim_rate_2").val() * $("#per_deim_days_2").val() + $("#per_deim_rate_3").val() * $("#per_deim_days_3").val() + $("#per_deim_rate_4").val() * $("#per_deim_days_4").val() + $("#per_deim_rate_5").val() * $("#per_deim_days_5").val() + $("#per_deim_rate_6").val() * $("#per_deim_days_6").val()).toFixed(2);
+			perDeimSum += +(($("#per_deim_hotel_0").val() * $("#per_deim_days_0").val()) + ($("#per_deim_hotel_1").val() * $("#per_deim_days_1").val()) + ($("#per_deim_hotel_2").val() * $("#per_deim_days_2").val()) + ($("#per_deim_hotel_3").val() * $("#per_deim_days_3").val()) + ($("#per_deim_hotel_4").val() * $("#per_deim_days_4").val()) + ($("#per_deim_hotel_5").val() * $("#per_deim_days_5").val()) + ($("#per_deim_hotel_6").val() * $("#per_deim_days_6").val())).toFixed(2);
+			return perDeimSum;			
+		}		
 		$(document).on("change", "input[name *= 'per_deim_rate_']", function() {
-
+				
 			$("input[name *= 'per_deim_rate_']").each(function(){
-				perDeimSum = +parseFloat($("#per_deim_rate_0").val() * $("#per_deim_days_0").val() + $("#per_deim_rate_1").val() * $("#per_deim_days_1").val() + $("#per_deim_rate_2").val() * $("#per_deim_days_2").val() + $("#per_deim_rate_3").val() * $("#per_deim_days_3").val() + $("#per_deim_rate_4").val() * $("#per_deim_days_4").val() + $("#per_deim_rate_5").val() * $("#per_deim_days_5").val() + $("#per_deim_rate_6").val() * $("#per_deim_days_6").val()).toFixed(2);
-
-				perDeimSum += +(($("#per_deim_hotel_0").val() * $("#per_deim_days_0").val()) + ($("#per_deim_hotel_1").val() * $("#per_deim_days_1").val()) + ($("#per_deim_hotel_2").val() * $("#per_deim_days_2").val()) + ($("#per_deim_hotel_3").val() * $("#per_deim_days_3").val()) + ($("#per_deim_hotel_4").val() * $("#per_deim_days_4").val()) + ($("#per_deim_hotel_5").val() * $("#per_deim_days_5").val()) + ($("#per_deim_hotel_6").val() * $("#per_deim_days_6").val())).toFixed(2);
-			});
+				//sums the products of all the per diem rates and number of days at that rate
+				perDeimSum = updateSum();			
+			});	
 			$("#per_deim_total").val(parseFloat(perDeimSum).toFixed(2));
 		});
-
+		
 		$(document).on("change", "input[name *= 'per_deim_days_']", function() {
 			$("input[name *= 'per_deim_days_']").each(function(){
-				perDeimSum = +parseFloat($("#per_deim_rate_0").val() * $("#per_deim_days_0").val() + $("#per_deim_rate_1").val() * $("#per_deim_days_1").val() + $("#per_deim_rate_2").val() * $("#per_deim_days_2").val() + $("#per_deim_rate_3").val() * $("#per_deim_days_3").val() + $("#per_deim_rate_4").val() * $("#per_deim_days_4").val() + $("#per_deim_rate_5").val() * $("#per_deim_days_5").val() + $("#per_deim_rate_6").val() * $("#per_deim_days_6").val()).toFixed(2);
-
-                perDeimSum += +(($("#per_deim_hotel_0").val() * $("#per_deim_days_0").val()) + ($("#per_deim_hotel_1").val() * $("#per_deim_days_1").val()) + ($("#per_deim_hotel_2").val() * $("#per_deim_days_2").val()) + ($("#per_deim_hotel_3").val() * $("#per_deim_days_3").val()) + ($("#per_deim_hotel_4").val() * $("#per_deim_days_4").val()) + ($("#per_deim_hotel_5").val() * $("#per_deim_days_5").val()) + ($("#per_deim_hotel_6").val() * $("#per_deim_days_6").val())).toFixed(2);
+				perDeimSum = updateSum();
 			});
 			$("#per_deim_total").val(parseFloat(perDeimSum).toFixed(2));
 		});
 
 		$(document).on("change", "input[name *= 'per_deim_hotel_']", function() {
 			$("input[name *= 'per_deim_hotel_']").each(function(){
-				perDeimSum = +parseFloat($("#per_deim_rate_0").val() * $("#per_deim_days_0").val() + $("#per_deim_rate_1").val() * $("#per_deim_days_1").val() + $("#per_deim_rate_2").val() * $("#per_deim_days_2").val() + $("#per_deim_rate_3").val() * $("#per_deim_days_3").val() + $("#per_deim_rate_4").val() * $("#per_deim_days_4").val() + $("#per_deim_rate_5").val() * $("#per_deim_days_5").val() + $("#per_deim_rate_6").val() * $("#per_deim_days_6").val()).toFixed(2);
-
-                perDeimSum += +(($("#per_deim_hotel_0").val() * $("#per_deim_days_0").val()) + ($("#per_deim_hotel_1").val() * $("#per_deim_days_1").val()) + ($("#per_deim_hotel_2").val() * $("#per_deim_days_2").val()) + ($("#per_deim_hotel_3").val() * $("#per_deim_days_3").val()) + ($("#per_deim_hotel_4").val() * $("#per_deim_days_4").val()) + ($("#per_deim_hotel_5").val() * $("#per_deim_days_5").val()) + ($("#per_deim_hotel_6").val() * $("#per_deim_days_6").val())).toFixed(2);
+				perDeimSum = updateSum();
 			});
 			$("#per_deim_total").val(parseFloat(perDeimSum).toFixed(2));
 		});
@@ -870,7 +901,101 @@
 			$("#per_deim_l_0").val(parseFloat(+$("#per_deim_rate_0").val() * lunchRate).toFixed(2));
 			$("#per_deim_d_0").val(parseFloat(+$("#per_deim_rate_0").val() * dinnerRate).toFixed(2));
 		});
+		function calcMealTotal(which){
+			
+			var tempB = +parseFloat($("#per_deim_b_"+which).val());
+			var tempL = +parseFloat($("#per_deim_l_"+which).val());
+			var tempD = +parseFloat($("#per_deim_d_"+which).val());
+			var result = tempB+tempL+tempD;
+			if(result >= 0) 
+				return result
+			return 0; 
+		
+		}
+		function calcPerDeimSum(){
+			perDeimSum = +parseFloat(calcMealTotal(0) * $("#per_deim_days_0").val() + calcMealTotal(1) * $("#per_deim_days_1").val() + calcMealTotal(2) * $("#per_deim_days_2").val() + calcMealTotal(3) * $("#per_deim_days_3").val() + calcMealTotal(4) * $("#per_deim_days_4").val() + calcMealTotal(5) * $("#per_deim_days_5").val() + calcMealTotal(6) * $("#per_deim_days_6").val()   ).toFixed(2);
+			perDeimSum += +parseFloat((($("#per_deim_hotel_0").val() * $("#per_deim_days_0").val()) + ($("#per_deim_hotel_1").val() * $("#per_deim_days_1").val()) + ($("#per_deim_hotel_2").val() * $("#per_deim_days_2").val()) + ($("#per_deim_hotel_3").val() * $("#per_deim_days_3").val()) + ($("#per_deim_hotel_4").val() * $("#per_deim_days_4").val()) + ($("#per_deim_hotel_5").val() * $("#per_deim_days_5").val()) + ($("#per_deim_hotel_6").val() * $("#per_deim_days_6").val())).toFixed(2));
+			return perDeimSum;
+		}		
+		// added to fix per deim calc
+		/**********************************************************************************************
+		Needs to be refactored....left for now for the sake of functionality***************************/
+		$(document).on("change", "#per_deim_b_0", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));	
+		});
+		$(document).on("change", "#per_deim_l_0", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_d_0", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		/************************************************************************/
+		$(document).on("change", "#per_deim_b_1", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_l_1", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_d_1", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		/************************************************************************/
+		$(document).on("change", "#per_deim_b_2", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_l_2", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_d_2", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		/************************************************************************/
+		$(document).on("change", "#per_deim_b_3", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_l_3", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_d_3", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
 
+		/************************************************************************/
+		$(document).on("change", "#per_deim_b_4", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_l_4", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_d_4", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+
+		/************************************************************************/
+		$(document).on("change", "#per_deim_b_5", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_l_5", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_d_5", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+
+		/************************************************************************/
+		$(document).on("change", "#per_deim_b_6", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_l_6", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		$(document).on("change", "#per_deim_d_6", function() {
+			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+		});
+		/***********************************************************************************************/
+		
+		
+		
 		$(document).on("change", "#per_deim_rate_1", function() {
 			var breakfastRate = .<?= $breakfast_rate ?>;
 			var lunchRate = .<?= $lunch_rate ?>;
@@ -1165,10 +1290,14 @@
 
 	</script>
 
-    <br /><hr>
+	<br />
+	<hr>
 	<? //Registration ?>
-	<strong>Event Registration</strong><br /><br /><a class="tooltip" href="#">Registration:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Registration</em>
-	Enter the cost of registration for the event you are traveling to (if any).</span></a> $
+	<strong>Event Registration</strong><br /> <br /> <a class="tooltip"
+		href="#">Registration:<span class="custom help"><img
+			src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Registration</em>
+			Enter the cost of registration for the event you are traveling to (if
+			any).</span></a> $
 	<?
     $form_input = array('name' => 'registration', 'id' => 'registration', 'maxlength' => '8', 'size' => '8', 'value' => set_value('registration', (isset($registration) ? $registration : '')));
 	echo form_input($form_input); //Needs to be filled
@@ -1187,8 +1316,11 @@
     echo "<br /><hr>";
     //Other expenses
     ?>
-	<strong>Other Expenses</strong><br /><br /><a class="tooltip" href="#">Total:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Other Expenses</em>
-	Enter any other incidental costs you may incur on your trip in the table below.</span></a> $
+	<strong>Other Expenses</strong><br /> <br /> <a class="tooltip"
+		href="#">Total:<span class="custom help"><img
+			src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Other
+				Expenses</em> Enter any other incidental costs you may incur on your
+			trip in the table below.</span></a> $
 	<?
 	$form_input = array('name' => 'expense_total', 'id' => 'expense_total', 'maxlength' => '8', 'size' => '8', 'readonly' => 'readonly', 'value' => set_value('expense_total', (isset($expense_total) ? $expense_total : '0.00')));
 	echo form_input($form_input);
@@ -1242,7 +1374,8 @@
 	echo form_submit('save', 'Save'); ?> <? //Will need validation here.
 	echo form_reset('reset', 'Reset'); ?> <?
     ?>
-    <input type="button" value="Cancel" onclick="location.href='<? echo (isset($return_to) ? ($return_to == 1 ? base_url("index.php/triplist/view") : base_url("index.php/triplist/dtcview")) : base_url("index.php/triplist/view")); ?>';" />
+    <input type="button" value="Cancel"
+		onclick="location.href='<? echo (isset($return_to) ? ($return_to == 1 ? base_url("index.php/triplist/view") : base_url("index.php/triplist/dtcview")) : base_url("index.php/triplist/view")); ?>';" />
     <?
 
 	echo form_fieldset_close();

@@ -910,6 +910,7 @@
 			perDeimSum += +parseFloat((($("#per_deim_hotel_0").val() * $("#per_deim_days_0").val()) + ($("#per_deim_hotel_1").val() * $("#per_deim_days_1").val()) + ($("#per_deim_hotel_2").val() * $("#per_deim_days_2").val()) + ($("#per_deim_hotel_3").val() * $("#per_deim_days_3").val()) + ($("#per_deim_hotel_4").val() * $("#per_deim_days_4").val()) + ($("#per_deim_hotel_5").val() * $("#per_deim_days_5").val()) + ($("#per_deim_hotel_6").val() * $("#per_deim_days_6").val())).toFixed(2));
 			return perDeimSum;
 		}	
+		
 		for(i = 0; i < 7; i++){
 			$(document).on("change", "#per_deim_b_" + i, function() {
 				$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));	
@@ -922,75 +923,7 @@
 			});
 				
 		}
-				
-		// added to fix per deim calc
-		/**********************************************************************************************
-		Needs to be refactored....left for now for the sake of functionality***************************/
 		
-		$(document).on("change", "#per_deim_b_1", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_l_1", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_d_1", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-
-		$(document).on("change", "#per_deim_b_2", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_l_2", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_d_2", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		// ************************************************************************
-		$(document).on("change", "#per_deim_b_3", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_l_3", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_d_3", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-
-		// ************************************************************************
-		$(document).on("change", "#per_deim_b_4", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_l_4", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_d_4", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-
-		// ***********************************************************************
-		$(document).on("change", "#per_deim_b_5", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_l_5", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_d_5", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-
-		// ************************************************************************
-		$(document).on("change", "#per_deim_b_6", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_l_6", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_d_6", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		// *************************************************************************
-
 		
 		
 		$(document).on("change", "#per_deim_rate_0", function() {

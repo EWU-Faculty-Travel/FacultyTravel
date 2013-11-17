@@ -190,6 +190,7 @@
 				airfare.add( Validate.Format, { pattern: /((\d*)|((\d*)[\.][d][d]))/i, failureMessage: "Please enter the amount formatted as 800 or 800.00" } );
 			</script>
 			<?
+		
         }
 
 		if($modes->mode == 8)
@@ -893,14 +894,6 @@
 			$("#per_deim_total").val(parseFloat(perDeimSum).toFixed(2));
 		});
 
-		$(document).on("change", "#per_deim_rate_0", function() {
-			var breakfastRate = .<?= $breakfast_rate ?>;
-			var lunchRate = .<?= $lunch_rate ?>;
-			var dinnerRate = .<?= $dinner_rate ?>;
-			$("#per_deim_b_0").val(parseFloat(+$("#per_deim_rate_0").val() * breakfastRate).toFixed(2));
-			$("#per_deim_l_0").val(parseFloat(+$("#per_deim_rate_0").val() * lunchRate).toFixed(2));
-			$("#per_deim_d_0").val(parseFloat(+$("#per_deim_rate_0").val() * dinnerRate).toFixed(2));
-		});
 		function calcMealTotal(which){
 			
 			var tempB = +parseFloat($("#per_deim_b_"+which).val());
@@ -916,20 +909,24 @@
 			perDeimSum = +parseFloat(calcMealTotal(0) * $("#per_deim_days_0").val() + calcMealTotal(1) * $("#per_deim_days_1").val() + calcMealTotal(2) * $("#per_deim_days_2").val() + calcMealTotal(3) * $("#per_deim_days_3").val() + calcMealTotal(4) * $("#per_deim_days_4").val() + calcMealTotal(5) * $("#per_deim_days_5").val() + calcMealTotal(6) * $("#per_deim_days_6").val()   ).toFixed(2);
 			perDeimSum += +parseFloat((($("#per_deim_hotel_0").val() * $("#per_deim_days_0").val()) + ($("#per_deim_hotel_1").val() * $("#per_deim_days_1").val()) + ($("#per_deim_hotel_2").val() * $("#per_deim_days_2").val()) + ($("#per_deim_hotel_3").val() * $("#per_deim_days_3").val()) + ($("#per_deim_hotel_4").val() * $("#per_deim_days_4").val()) + ($("#per_deim_hotel_5").val() * $("#per_deim_days_5").val()) + ($("#per_deim_hotel_6").val() * $("#per_deim_days_6").val())).toFixed(2));
 			return perDeimSum;
-		}		
+		}	
+		for(i = 0; i < 7; i++){
+			$(document).on("change", "#per_deim_b_" + i, function() {
+				$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));	
+			});
+			$(document).on("change", "#per_deim_l_" + i, function() {
+				$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+			});
+			$(document).on("change", "#per_deim_d_" + i, function() {
+				$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
+			});
+				
+		}
+				
 		// added to fix per deim calc
 		/**********************************************************************************************
 		Needs to be refactored....left for now for the sake of functionality***************************/
-		$(document).on("change", "#per_deim_b_0", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));	
-		});
-		$(document).on("change", "#per_deim_l_0", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		$(document).on("change", "#per_deim_d_0", function() {
-			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
-		});
-		/************************************************************************/
+		
 		$(document).on("change", "#per_deim_b_1", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
@@ -939,7 +936,7 @@
 		$(document).on("change", "#per_deim_d_1", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
-		/************************************************************************/
+
 		$(document).on("change", "#per_deim_b_2", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
@@ -949,7 +946,7 @@
 		$(document).on("change", "#per_deim_d_2", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
-		/************************************************************************/
+		// ************************************************************************
 		$(document).on("change", "#per_deim_b_3", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
@@ -960,7 +957,7 @@
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
 
-		/************************************************************************/
+		// ************************************************************************
 		$(document).on("change", "#per_deim_b_4", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
@@ -971,7 +968,7 @@
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
 
-		/************************************************************************/
+		// ***********************************************************************
 		$(document).on("change", "#per_deim_b_5", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
@@ -982,7 +979,7 @@
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
 
-		/************************************************************************/
+		// ************************************************************************
 		$(document).on("change", "#per_deim_b_6", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
@@ -992,9 +989,18 @@
 		$(document).on("change", "#per_deim_d_6", function() {
 			$("#per_deim_total").val(parseFloat( calcPerDeimSum() ).toFixed(2));
 		});
-		/***********************************************************************************************/
+		// *************************************************************************
+
 		
 		
+		$(document).on("change", "#per_deim_rate_0", function() {
+			var breakfastRate = .<?= $breakfast_rate ?>;
+			var lunchRate = .<?= $lunch_rate ?>;
+			var dinnerRate = .<?= $dinner_rate ?>;
+			$("#per_deim_b_0").val(parseFloat(+$("#per_deim_rate_0").val() * breakfastRate).toFixed(2));
+			$("#per_deim_l_0").val(parseFloat(+$("#per_deim_rate_0").val() * lunchRate).toFixed(2));
+			$("#per_deim_d_0").val(parseFloat(+$("#per_deim_rate_0").val() * dinnerRate).toFixed(2));
+		});
 		
 		$(document).on("change", "#per_deim_rate_1", function() {
 			var breakfastRate = .<?= $breakfast_rate ?>;

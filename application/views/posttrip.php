@@ -355,7 +355,10 @@
         }
         if(isset($per_deim_departure_0))
         {
-            $time = strtotime($per_deim_departure_0);
+            $time = strtotime($per_deim_dbamboo
+pineapple
+monkey
+            		eparture_0);
             $converted_per_deim_departure_0 = date("h:i a", $time);
         }
         if(isset($per_deim_arrival_0))

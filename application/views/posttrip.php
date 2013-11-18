@@ -46,8 +46,9 @@
     echo form_fieldset('Required Fields');
 
     ?>
-    <input type="hidden" name="return_to" id="return_to" value="<? echo $return_to; ?>" readonly />
-    <input type="hidden" name="trip_id" id="trip_id" value="<? echo $trip_id; ?>" readonly />
+    <input type="hidden" name="return_to" id="return_to"
+		value="<? echo $return_to; ?>" readonly /> <input type="hidden"
+		name="trip_id" id="trip_id" value="<? echo $trip_id; ?>" readonly />
     <?
 
     //Per Deim
@@ -330,9 +331,14 @@
 
         });
         </script>
-        <strong>Per Diem</strong><br /><br /><a class="tooltip" href="#">Per Diem Total:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Per Diem</em>
-            Enter your daily costs for breakfast, lunch, dinner and hotel in the table below. Also enter the start and end of your travel day. If your travel
-            day begins after the breakfast period do not enter an estimate for the breakfast cost.</span></a> $
+	<strong>Per Diem</strong><br />
+	<br />
+	<a class="tooltip" href="#">Per Diem Total:<span class="custom help"><img
+			src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Per
+				Diem</em> Enter your daily costs for breakfast, lunch, dinner and
+			hotel in the table below. Also enter the start and end of your travel
+			day. If your travel day begins after the breakfast period do not
+			enter an estimate for the breakfast cost.</span></a> $
         <?
         $form_input = array('name' => 'pd_total', 'id' => 'pd_total', 'maxlength' => '8', 'size' => '8', 'readonly' => 'readonly', 'value' => set_value('per_deim_total', (isset($per_deim_total) ? $per_deim_total : '0.00')));
         echo form_input($form_input); //Needs to be filled
@@ -355,10 +361,7 @@
         }
         if(isset($per_deim_departure_0))
         {
-            $time = strtotime($per_deim_dbamboo
-pineapple
-monkey
-            		eparture_0);
+            $time = strtotime($per_deim_departure_0);
             $converted_per_deim_departure_0 = date("h:i a", $time);
         }
         if(isset($per_deim_arrival_0))
@@ -547,7 +550,7 @@ monkey
 						 (parseFloat($("#per_deim_b_5").val()) || 0) + (parseFloat($("#per_deim_l_5").val()) || 0) + (parseFloat($("#per_deim_d_5").val()) || 0) + (parseFloat($("#per_deim_hotel_5").val()) || 0) +
 						 (parseFloat($("#per_deim_b_6").val()) || 0) + (parseFloat($("#per_deim_l_6").val()) || 0) + (parseFloat($("#per_deim_d_6").val()) || 0) + (parseFloat($("#per_deim_hotel_6").val()) || 0);
 
-            $("#pd_total").val(parseFloat(perDeimSum).toFixed(2));
+                          $("#pd_total").val(parseFloat(perDeimSum).toFixed(2));
         });
 
         $(document).on("change", "input[name *= 'per_deim_l_']", function() {
@@ -788,7 +791,8 @@ monkey
 
         </script>
 
-        <br /><hr />
+	<br />
+	<hr />
 
         <?
         foreach($modes->result() as $modes)
@@ -805,7 +809,12 @@ monkey
                     $b_hr = TRUE;
                 }
                 ?>
-                <strong>Personal Car</strong><br /><br /><a class="tooltip" href="#">Private Vehicle Mileage Reimbursement:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Mileage: </em>Enter your daily mileage from your personal car in the table below.</span></a> $
+                <strong>Personal Car</strong><br />
+	<br />
+	<a class="tooltip" href="#">Private Vehicle Mileage Reimbursement:<span
+		class="custom help"><img src="/../../assets/images/Help.png"
+			alt="Help" height="48" width="48" /><em>Mileage: </em>Enter your
+			daily mileage from your personal car in the table below.</span></a> $
             <?
             $form_input = array('name' => 'private_car_total', 'id' => 'private_car_total', 'maxlength' => '8', 'size' => '8', 'readonly' => 'readonly', 'value' => set_value('private_car_total', (isset($private_car_total) ? $private_car_total : '0.00')));
             echo form_input($form_input);
@@ -857,9 +866,12 @@ monkey
 
         //Other expenses
         ?>
-        <br />
-        <strong>Other Miscellaneous Travel-Related Expenses</strong><br /><br /><a class="tooltip" href="#">Total:<span class="custom help"><img src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Other Expenses</em>
-        Enter any other costs you may incurred on your trip in the table below. Receipts required if total is greater than $50.</span></a> $
+        <br /> <strong>Other Miscellaneous Travel-Related Expenses</strong><br />
+	<br />
+	<a class="tooltip" href="#">Total:<span class="custom help"><img
+			src="/../../assets/images/Help.png" alt="Help" height="48" width="48" /><em>Other
+				Expenses</em> Enter any other costs you may incurred on your trip in
+			the table below. Receipts required if total is greater than $50.</span></a> $
         <?
         $form_input = array('name' => 'expense_total', 'id' => 'expense_total', 'maxlength' => '8', 'size' => '8', 'readonly' => 'readonly', 'value' => set_value('expense_total', (isset($expense_total) ? $expense_total : '0.00')));
         echo form_input($form_input);
@@ -959,10 +971,11 @@ monkey
             $('#refund_date_0').datepicker();
             $('#refund_date_1').datepicker();
         </script>
-    <br /><hr />
+	<br />
+	<hr />
 
-    <br />
-    <strong>Refunds</strong><br /><br />
+	<br /> <strong>Refunds</strong><br />
+	<br />
     <?
     $this->table->set_heading('Date:', 'Refunds From (Payee):', 'Amount:');
 
@@ -1002,10 +1015,12 @@ monkey
         misc_amount1.add( Validate.Format, { pattern: /((\d*)|((\d*)[\.][d][d]))/i, failureMessage: "Please enter your the amount as 800 or 800.00" } );
 
 	</script>
-    <br /><hr />
+	<br />
+	<hr />
 
-    <strong>Comments</strong><br /><br />
-    <textarea name = 'comments' id = 'comments' cols = '50' rows = '5' ><? echo set_value('comments', (isset($comments) ? $comments : '')); ?></textarea>
+	<strong>Comments</strong><br />
+	<br />
+	<textarea name='comments' id='comments' cols='50' rows='5'><? echo set_value('comments', (isset($comments) ? $comments : '')); ?></textarea>
 
 	<script type="text/javascript">
 		var comments = new LiveValidation('comments', { validMessage: '\u2713', wait: 500});
@@ -1018,7 +1033,8 @@ monkey
     echo form_submit('save', 'Save'). " "; //Will need validation here.
     echo form_reset('reset', 'Reset'). " ";
     ?>
-    <input type="button" value="Cancel" onclick="location.href='<? echo (isset($return_to) ? ($return_to == 1 ? base_url("index.php/triplist/view") : base_url("index.php/triplist/dtcview")) : base_url("index.php/triplist/view")); ?>';" />
+    <input type="button" value="Cancel"
+		onclick="location.href='<? echo (isset($return_to) ? ($return_to == 1 ? base_url("index.php/triplist/view") : base_url("index.php/triplist/dtcview")) : base_url("index.php/triplist/view")); ?>';" />
     <?
 
     echo form_fieldset_close();

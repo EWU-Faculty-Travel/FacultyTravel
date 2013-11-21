@@ -289,7 +289,7 @@ for ($i = 0; $i < count($GLOBALS['PMD']["TABLE_NAME"]); $i++) {
     ?>
 </tr>
 </thead>
-<tbody id="id_tbody_<?php echo $t_n_url ?>"
+<tbody id="id_tbody_<?php echo $t_n_url ?>">
     <?php
     if (isset($tab_pos[$t_n]) && empty($tab_pos[$t_n]["V"])) {
         echo 'style="display: none;"';

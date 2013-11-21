@@ -438,6 +438,7 @@ class Triplist extends MY_Controller
 				$this->load->view('templates/header', $data);
 				$this->load->view('templates/dynamicnavbar', $data);
 				$this->load->view('printformjump', $data);
+			}
 			else
 			{
 				$data['box_6_total'] = $boxSixTotal;
